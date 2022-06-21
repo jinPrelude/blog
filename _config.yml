@@ -89,20 +89,13 @@ avatar: assets/img/favicons/android-chrome-512x512.png
 toc: true
 
 comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
-  disqus:
-    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
+  active: 'giscus'        # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # Giscus options › https://giscus.app
   giscus:
-    repo:             # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: jinprelude/jinprelude.github.io            # <gh-username>/<repo>
+    repo_id: R_kgDOHg_Y4A
+    category: General
+    category_id: DIC_kwDOHg_Y4M4CPyWm
     mapping:          # optional, default to 'pathname'
     input_position:   # optional, default to 'bottom'
     lang:             # optional, default to the value of `site.lang`
