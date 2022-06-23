@@ -1,5 +1,5 @@
 ---
-title: '[SNN Basic Tutorial] Spiking Neural Network란'
+title: '[SNN Basic Tutorial 1] Spiking Neural Network란'
 date: 2022-06-21 19:53:00 +0900
 categories: ['SNN Basic Tutorial']
 tags: [SNN Basic Tutorial, SNN, Spiking Neural Network] # TAG names should always be lowercase
@@ -14,14 +14,14 @@ Spiking Neural Network(이하 SNN) 설명을 찾아 여기까지 오신 분들�
 
 SNN은 인공신경망(Artificial Neural Network, ANN)의 한 종류입니다. 인공신경망은 동물의 신경망이 정보를 처리하는 방식을 모방하여 만든 네트워크를 일컫는 말입니다. SNN은 이름 그대로 **Spiking**이 정보의 단위가 되며, 인공신경망이 그렇듯 뉴런과 시넵스로 이루어진 네트워크를 통해 전파됩니다. Spike는 기존 딥러닝 네트워크들(MLP, RNN, CNN 등)이 Tensor 혹은 실수값(float)을 주고받는 것에 비해 특정 뉴런에서 특정 시간에 Spike가 발생했는지에 대한 이산적인 정보만을 주고 받습니다.
 
-![Spiking Neurons의 정보처리 방식](/assets/img/post/showOpenGraphArticleImage.jpg)
+![Spiking Neurons의 정보처리 방식](/assets/img/post/2022-06-21/showOpenGraphArticleImage.jpg)
 _Spiking Neurons의 정보처리 방식, [출저](https://aip.scitation.org/doi/abs/10.1063/1.5042243)_
 
 그림은 두 개의 Spiking Neurons이 연결되어 있으며, pre Neuron이 post Neuron에게 정보를 전달하도록 설정되어있는 상태입니다. pre Neuron의 우측에 그려진 1차원 그래프는 시간축에 따라 pre Neuron이 post Neuron에게 총 3번의 Spike를 보낸다는 점을 알려줍니다. 사진의 가운데 파란색으로 채색된 그래프는 시간에 따른 post Neuron의 **활동전위(action potential)**를 나타냅니다(활동전위에 대해서는 [Neuroscience 기초(1)]()에서 자세히 다루겠습니다). Post Neuron의 활동전위는 pre Neuron으로부터 Spike를 받을 떄 특정한 값만큼 치솟고, 시간이 지남에 따라 서서히 줄어듭니다(Leaky). 세 번째 Spike가 post Neuron에 들어오게 되면서 활동전위는 임의의 **임계값(threshold)**인 $u_{th}$를 넘게 되고, 그와 동시에 post Neuron의 활동전위의 값은 0으로 초기화됩니다. 그리고 사진의 가장 아랫쪽 빨간색으로 채색된 그래프를 보았을 때 post Neuron의 활동전위가 임계값을 넘는 동시에 post Neuron에서 **Spike가 생성**되었음을 알 수 있습니다.
 
 다수의 Pre Neurons가 연결되어있을 때에도 동일합니다(아래 그림 참고). 시간축에 따라 Pre Neurons의 Spiking을 받고 Post Neuron의 활동전위가 임계값을 넘게 되면 Post Neuron은 Spiking을 생성해 냅니다. 
 
-![다수의 Pre Neurons가 있는 SNN](/assets/img/post/spikingneural630-810x435-c-default.jpg)
+![다수의 Pre Neurons가 있는 SNN](/assets/img/post/2022-06-21/spikingneural630-810x435-c-default.jpg)
 _다수의 Pre Neurons가 있는 SNN, [출저](https://www.eenewseurope.com/en/eta-adds-spiking-neural-network-support-to-mcu/)_
 
 
@@ -36,7 +36,7 @@ _다수의 Pre Neurons가 있는 SNN, [출저](https://www.eenewseurope.com/en/e
 SNN이 상용화되었을 때 가장 수요가 많은 것으로 예상되는 분야는 바로 Robotics와 Edge computing 시장입니다. 두 분야 모두 low latency와 low energy consumption을 필요로 하는 분야인데, SNN이 기존 DNN보다 **낮은 전력**으로 기동 가능한 특징이 있기 때문입니다. 
 
 무거운 양의 Tensor끼리의 행렬곱을 통해 연산이 이뤄지는 기존 DNN 방식과는 달리 SNN은 Spike의 누적에 의한 활동전위가 임계점을 넘으면 Spike를 보내는 단순한 구조로 되어있습니다. 이러한 방식은 **아날로그적인 방식**으로 구현이 가능하여 무거운 행렬연산을 위한 Computing Unit이 필요한 DNN과 달리 회로 레벨에서 직접적으로 신경망 구동을 설계할 수 있다는 장점이 있습니다. 때문에 SNN이 상용화 될 경우 저전력 고연산 작업이 필요할 것으로 예상되는 Robotics 분야가 특히 수혜를 볼 것이라는 의견이 있습니다. 이러한 특징때문에 SNN은 머신러닝 분야에서보다 반도체 분야에서 오히려 주목하고 SNN의 발전에 미리 준비하고 있는 모습입니다. 대표적으로 SNN신경망에 특화된 Intel의 Loihi 칩이 있습니다.
-![Intel의 Loihi칩](/assets/img/post/intel-loihi-2-1-16x9.jpg)
+![Intel의 Loihi칩](/assets/img/post/2022-06-21/intel-loihi-2-1-16x9.jpg)
 _SNN에 특화된 Intel의 Loihi칩-[출처](https://www.intel.com/content/www/us/en/newsroom/news/intel-unveils-neuromorphic-loihi-2-lava-software.html)_
 
 
