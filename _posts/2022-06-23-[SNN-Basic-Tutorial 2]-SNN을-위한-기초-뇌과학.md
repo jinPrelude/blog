@@ -1,14 +1,14 @@
 ---
-title: '[SNN Basic Tutorial 2] SNN을 위한 기초 신경과학'
+title: '[SNN Basic Tutorial 2] SNN을 위한 기초 뇌과학'
 date: 2022-06-29 17:02:00 +0900
 categories: ['SNN Basic Tutorial']
-tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, Neuroscience, 뉴런, 시넵스, 활동전위, action potential] # TAG names should always be lowercase
+tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, Neuroscience, 뇌과학, 뉴런, 시넵스, 활동전위, action potential] # TAG names should always be lowercase
 toc: true
 ---
 
-딥러닝을 공부해 보신 분들은 아시겠지만 DNN 네트워크의 형상학적인 부분을 동물의 신경망에서 영감을 받았다는 점을 제외하고는 더이상 생물학과 관련된 지식을 요구하지 않습니다. 하지만 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 에서 언급했듯이 SNN의 경우 태생이 생명과학에 뿌리를 두고 있는 만큼 대부분의 명칭이 생물학적 용어를 그대로 차용합니다. 본 글에서는 SNN의 기반이 되는 기초적인 신경과학을 다룹니다. 이 글을 읽고 SNN을 보신다면 더욱 깊은 이해를 하실 수 있으실거라 믿습니다. 이번 글을 읽으시기 전에 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 를 읽고 오신다면 이해가 더욱 수월하실 겁니다.
+딥러닝을 공부해 보신 분들은 아시겠지만 DNN 네트워크의 형상학적인 부분을 동물의 신경망에서 영감을 받았다는 점을 제외하고는 더이상 생물학과 관련된 지식을 요구하지 않습니다. 하지만 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 에서 언급했듯이 SNN의 경우 태생이 생명과학에 뿌리를 두고 있는 만큼 대부분의 명칭이 생물학적 용어를 그대로 차용합니다. 본 글에서는 SNN의 기반이 되는 기초적인 뇌과학을 다룹니다. 이 글을 읽고 SNN을 보신다면 더욱 깊은 이해를 하실 수 있으실거라 믿습니다. 이번 글을 읽으시기 전에 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 를 읽고 오신다면 이해가 더욱 수월하실 겁니다.
 
-> 본 내용은 [Neuroscience: Science of the Brain](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL__-ossL4AhVmGKYKHXu5BEUQFnoECAMQAQ&url=https%3A%2F%2Fbrain.mcmaster.ca%2FBrainBee%2FNeuroscience.Science.of.the.Brain.pdf&usg=AOvVaw1qxRUhwDpXU5UC86cs2wnK&cshid=1655946824320580)에 많은 기반을 두고 있습니다. 신경과학에 대한 지식이 전무한 제가 입문할 수 있도록 많은 도움을 준 자료입니다.
+> 본 내용은 [Neuroscience: Science of the Brain](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL__-ossL4AhVmGKYKHXu5BEUQFnoECAMQAQ&url=https%3A%2F%2Fbrain.mcmaster.ca%2FBrainBee%2FNeuroscience.Science.of.the.Brain.pdf&usg=AOvVaw1qxRUhwDpXU5UC86cs2wnK&cshid=1655946824320580)에 많은 기반을 두고 있습니다. 놔과학에 대한 지식이 전무한 제가 입문할 수 있도록 많은 도움을 준 자료입니다.
 {: .prompt-info }
 
 > 추후 SNN 공부에 쓰이게 될 용어에 있어서는 영어로 표기하겠습니다. 한영혼용이 읽으실 때 불편하실 수는 있어도 추후 관련 자료를 보실 때 더 도움이 되시리라 믿습니다.
@@ -67,7 +67,7 @@ Synapse를 기준으로 정보를 전달해주는(action potential이 생성된)
 
 ![synapse](/assets/img/post/2022-06-23/Synapse-Diagram.jpg)_synapse, [출저](https://www.sciencefacts.net/synapse.html)_
 
-Neurotransmitter에는 Glutamate, Glycine, GABA 등 다양한 종류가 있으며, 그에 따라 Ligand-gated channel도 sodium에 반응하는 채널 외에도 다양한 종류가 있습니다. 본 글에서는 neurotransmitter과의 상호작용에 의해 post-synaptic neuron의 전위차를 상승시켜주는 경우만 살펴보았지만, 특정 ligand-gated ion channel은 전위차를 되려 낮추기도 합니다. 본 글의 목적은 SNN을 이해하기 위해 신경과학의 기반을 다지기 위함으로 여기서 설명을 마무리하겠습니다.
+Neurotransmitter에는 Glutamate, Glycine, GABA 등 다양한 종류가 있으며, 그에 따라 Ligand-gated channel도 sodium에 반응하는 채널 외에도 다양한 종류가 있습니다. 본 글에서는 neurotransmitter과의 상호작용에 의해 post-synaptic neuron의 전위차를 상승시켜주는 경우만 살펴보았지만, 특정 ligand-gated ion channel은 전위차를 되려 낮추기도 합니다. 본 글의 목적은 SNN을 이해하기 위해 뇌과학의 기반을 다지기 위함으로 여기서 설명을 마무리하겠습니다.
 
 
 ## 마치며
