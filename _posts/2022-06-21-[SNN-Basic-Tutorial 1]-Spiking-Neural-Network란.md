@@ -8,7 +8,7 @@ math: true
 ---
 
 
-Spiking Neural Network(이하 SNN) 설명을 찾아 여기까지 오신 분들께서는 이미 SNN의 기본 개념은 어렴풋이 아실 거라고 생각합니다. **SNN Basic Tutorial** 연재에서는 딥러닝에 대한 기조척인 이해는 있지만 SNN은 처음이신 분들이 SNN의 기본적인 개념부터, 가장 기초적인 SNN 모델인 Leaky Integrate and Fire model(LIF)의 미분방정식까지 이해하시는 것을 목표로 작성하였습니다. 또한 파이썬을 이용하여 간단한 LIF 모델까지 구현하여 볼 것입니다.
+**SNN Basic Tutorial** 연재에서는 딥러닝에 대한 기조척인 이해는 있지만 SNN은 처음이신 분들이 SNN의 기본적인 개념부터, 가장 기초적인 SNN 모델인 Leaky Integrate and Fire model(LIF)의 미분방정식까지 이해하시는 것을 목표로 작성하였습니다. 또한 파이썬을 이용하여 간단한 LIF 모델까지 구현하여 볼 것입니다.
 
 ## **SNN 이란**
 

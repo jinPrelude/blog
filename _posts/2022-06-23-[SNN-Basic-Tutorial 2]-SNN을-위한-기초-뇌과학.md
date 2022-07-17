@@ -33,7 +33,7 @@ ic spine을 통해 신호를 전달하기 위한 화학반응을 일으키게 �
 
 뇌에서는 2가지 신호전달 방법이 있습니다. 하나는 **화학적 신호**, 하나는 **전기적 신호**입니다. 뉴런과 뉴런간에 신호가 전달될 때, 즉, dendritic spine과 axon terminal 간에는 화학적 신호전달이 일어나고, action potential 이 threshold를 넘어서 cell body에서 spike가 생성되어 axon을 통해 axon terminal로 spike를 보낼 때는 전기적 신호전달이 일어납니다. 먼저 뉴런 내부에서 전기적 신호전달이 어떻게 일어나는지, 즉, Action potential에 대해 알아보겠습니다.
 
-Action potential을 알기 위해서는 먼저 Membrane potential이 무엇인지 알아야 합니다. 뉴런은 **Membrane(세포막)**으로 감싸져 있으며 세포막을 기준으로 내부와 외부가 나뉘고, 내부와 외부 사이에 전위차가 존재합니다. 뉴런의 내부는 외부와 비교해 -70mv만큼의 전위차를 가지는데, 이 전위차를 **Membrane Potential(막전위)** 이라고 합니다. 그리고 뉴런의 내외부에는 양전하를 띄는 **Sodium(나트륨)** 과 **Potassium(칼륨)** 이 존재하는데, 내부에는 Potassium이, 외부에는 Sodium이 더 많이 분포해 있습니다(아래 그림 참조).
+Action potential을 알기 위해서는 먼저 Membrane potential이 무엇인지 알아야 합니다. 뉴런은 **Membrane(세포막)**으로 감싸져 있으며 세포막을 기준으로 내부와 외부가 나뉘고, 내부와 외부 사이에 전위차가 존재합니다. 뉴런의 내부는 외부와 비교해 -65mv만큼의 전위차를 가지는데, 이 전위차를 **Membrane Potential(막전위)** 이라고 합니다. 그리고 뉴런의 내외부에는 양전하를 띄는 **Sodium(나트륨)** 과 **Potassium(칼륨)** 이 존재하는데, 내부에는 Potassium이, 외부에는 Sodium이 더 많이 분포해 있습니다(아래 그림 참조).
 
 ![membrane potential](/assets/img/post/2022-06-23/membrane_potential.jpg)_membrane potential, [출저](https://jackwestin.com/resources/mcat-content/plasma-membrane/membrane-potential)_
 
@@ -43,11 +43,11 @@ Action potential은 cell body가 dendritic spines들로부터 다른 뉴런들�
 
 Ligand-gated Sodium channel의 이름을 분석해보며 역할을 알아보겠습니다. **channel(체널)** 이란 세포막(membrane)에 붙어서 출입통로의 역할을 하는 기관으로 channel의 종류에 따라 다양한 조건에서 다양한 물질들을 출입시킵니다. 위 사진에서 노란색, 파란색, 보라색으로 그려진 것들이 세포막에 붙어있는 체널을 그린 것입니다. Sodium은 말 그대로 sodium을 드나들도록 한다는 뜻이며 Ligand-gated의 의미는 Neurotransmitter(신경전달물질)에 의해 개폐가 이루어진다는 의미를 가지고 있습니다. Neurotransmitter과의 상호작용에 대해서는 화학적 반응 챕터에서 더 자세히 알아보도록 하겠습니다.
 
-Ligand-gated Sodium channels들이 활성화되면 channel을 통해 외부의 sodium이 유입되며, 이로 인해 -70mV의 전위차를 가지고 있던 membrane potential의 값이 -55mV까지 치솟게 됩니다. Membrane potential이 -55mV가 되면 이때부터는 **voltage-gated sodium channels(위 그림에서 보라색 채널)**들이 열리게 됩니다. 이름에서 유추해볼 수 있듯이 이 체널은 membrane potential에 반응하며 -55mV가 되면 활성화되어 외부의 sodium을 뉴런 내부로 유입하게 되고, 이로 인해 membrane potential의 값이 -55mV에서 30~40mV까지 치솟게 됩니다. 고로 action potential은 membrane potential이 -55mV만 넘게 되면 시작된다고 볼 수 있고, 이 값을 threshold voltage라고 합니다.
+Ligand-gated Sodium channels들이 활성화되면 channel을 통해 외부의 sodium이 유입되며, 이로 인해 -65mV의 전위차를 가지고 있던 membrane potential의 값이 상승하게 됩니다. 하지만 뉴런의 membrane은 전류를 완전히 차폐하지는 못하는데, 때문에 만약 membrane potential의 값이 상승폭이 충분히 크지 못하면 membrane을 통한 전위 누수(Leak)가 일어나는 크기가 더 크게 되고, membrane potential은 다시 -65mV로 되돌아가게 됩니다. 반면 충분한 신호 전달이 이루어져 Membrane potential이 -55mV가 넘어가게 되면, 이때부터는 **voltage-gated sodium channels(위 그림에서 보라색 채널)**들이 열리게 됩니다. 이름에서 유추해볼 수 있듯이 이 체널은 membrane potential에 반응하며 -55mV가 되면 활성화되어 외부의 sodium을 뉴런 내부로 유입하게 되고, 이로 인해 membrane potential의 값이 -55mV에서 30~40mV까지 치솟게 됩니다. 고로 action potential은 membrane potential이 -55mV만 넘게 되면 시작된다고 볼 수 있고, 이 값을 threshold voltage라고 합니다.
 
 ![action potential gif](/assets/img/post/2022-06-23/actionp1.gif)_action potential의 visualization, [출저](https://faculty.washington.edu/chudler/ap.html)_
 
-Membrane potential이 30~40mV에 다다르게 되면 열린 voltage-gated sodium channel들은 닫히게 되고(ligand-gated Sodium channel은 neurotransmitter이 떨어지면서 먼저 닫히게 됩니다) **voltage-gated potassium channel(위 그림에서 노란색 채널)**이 열리게 되는데, 이 potassium channel은 내부의 potassium을 외부로 배출시키는 역할을 합니다. 더이상의 sodium 유입이 막히고 potassium이 유입되기 시작하며 membrane potential은 급격히 떨어지기 시작합니다. 그리고 막전위가 -70mV 이하로 떨어지게 되면 potassium channel 또한 닫히게 되며 action potential이 끝나게 됩니다. 이 때 potassium의 배출에 관성이 붙게 되며 초기 membrane potential인 -70mV보다 더 떨어지게 되는데, 이는 **sodium-potassium pump(위 그림에서 하늘색 채널)** 에 의해 서서히 조정되어 다시끔 -70mV로 원상복구 되어집니다.
+Membrane potential이 30~40mV에 다다르게 되면 열린 voltage-gated sodium channel들은 닫히게 되고(ligand-gated Sodium channel은 neurotransmitter이 떨어지면서 먼저 닫히게 됩니다) **voltage-gated potassium channel(위 그림에서 노란색 채널)**이 열리게 되는데, 이 potassium channel은 내부의 potassium을 외부로 배출시키는 역할을 합니다. 더이상의 sodium 유입이 막히고 potassium이 배출되기 시작하며 membrane potential은 급격히 떨어지기 시작합니다. 그리고 막전위가 -65mV 이하로 떨어지게 되면 potassium channel 또한 닫히게 되며 action potential이 끝나게 됩니다. 이 때 potassium의 배출에 관성이 붙게 되며 초기 membrane potential인 -65mV보다 더 떨어지게 되는데, 이는 **sodium-potassium pump(위 그림에서 하늘색 채널)** 에 의해 서서히 조정되어 다시끔 -65mV로 원상복구 되어집니다.
 
 sodium-potassium pump는 뉴런 내부의 sodium 3개와 외부의 potassium 2개를 맞바꾸는 역할을 수행하는 channel입니다. 이 sodium-potassium pump는 membrane potential을 원상복구해주는 것에 더해서 뉴런의 excitation으로 인해 급격하게 늘어난 뉴런 내부의 sodium, 그리고 급격하게 줄어든 potassium 또한 원상복구해 주는 역할을 수행합니다. 이 pump는 neurotransmitter 혹은 voltage에 의해 자동으로 작동하는 channels들과는 달리 별도의 에너지인 ATP가 있어야 작동하며, 때문에 뉴런 내부의 미토콘드리아에 의해 생성된 ATP를 소모하며 작동합니다. 
 
