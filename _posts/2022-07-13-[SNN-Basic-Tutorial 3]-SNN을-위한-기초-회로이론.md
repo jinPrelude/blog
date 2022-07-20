@@ -28,11 +28,11 @@ $$ I = \frac{\Delta q}{\Delta t} $$
 ### **전압**
 전압은 전위의 차이를 뜻합니다. 때문에 전위가 무엇인지 먼저 알아보겠습니다. 전위는 단위전하가 갖는 전기적 포텐셜 에너지를 뜻합니다. 말이 조금 어려우시다면 위키피디아에서 가져온 아래 그림을 참고하시기 바랍니다. 아래 그림에서 큰 구는 1C의 전하를, 작은 구는 -1C의 전하를 뜻하며, 보라색은 전위가 가장 높은 부분을, 청록색은 전위가 가장 낮은 부분을 뜻합니다. 전위는 양전하로부터 거리가 가까울 수록 높아지며, 음전하와 가까워질 수록 낮아집니다. 그리고 전하와 거리가 무한이 멀어졌을 때 전하가 0으로 수렴한다고 정의합니다.
 
- ![Electric potential](/assets/img/post/2022-07-17/VFPt_metal_balls_largesmall_potential+contour.svg.png)_electric potential, [출저](https://en.wikipedia.org/wiki/Electric_potential)_
+ ![Electric potential](/assets/img/post/2022-07-13/VFPt_metal_balls_largesmall_potential+contour.svg.png)_electric potential, [출저](https://en.wikipedia.org/wiki/Electric_potential)_
 
 전압이란 기준점 A와 비교점 B의 전위의 차이를 뜻하며, 단위는 V(볼트)입니다. 때문에 전압은 절대적인 값이 아닌 상대적인 값임을 알 수 있으며, 기준점과 비교점 모두 존재해야 전압이 성립합니다. 그 예로 아래 배터리 예제를 살펴보겠습니다. 두 베터리는 각각 다른 음극과 양극의 전압을 가지고 있지만, 두 베터리의 전압은 10V로 같습니다. 왜냐하면 두 베터리의 양극을 기준으로 봤을 때 음극과의 전압차이가 10V로 같기 때문입니다.
 
-![batteries](/assets/img/post/2022-07-17/batteries.PNG)_전압 예제_
+![batteries](/assets/img/post/2022-07-13/batteries.PNG)_전압 예제_
 
 ## **법칙들**
 위 단원에서 회로를 이해하기 위한 기본적인 개념들인 전하, 전위, 전류, 전압에 대하여 알아보았습니다. 이번 단원에서는 회로에 있어서 가장 기초적인 법칙 3가지를 알아보도록 하겠습니다.
@@ -45,7 +45,7 @@ $$ V = IR $$
 
 여기서 V는 전압, I는 전류, R은 저항입니다(저항은 전류를 방해하는 정도이며, 단위는 $\Omega$(옴), 표기는 R입니다). 옴의 법칙을 시각적으로 이해하기 위해 가장 간단한 회로를 가져왔습니다.
 
-![ohm's law](/assets/img/post/2022-07-17/ohmslaw.jpg){: width="200" height="280"}_Ohm's Law, [출저](https://ko.wikipedia.org/wiki/%EC%98%B4%EC%9D%98_%EB%B2%95%EC%B9%99)_
+![ohm's law](/assets/img/post/2022-07-13/ohmslaw.jpg){: width="200" height="280"}_Ohm's Law, [출저](https://ko.wikipedia.org/wiki/%EC%98%B4%EC%9D%98_%EB%B2%95%EC%B9%99)_
 
 위 회로는 저항만 달려있는 매우 단순한 형태의 회로입니다. 그리고 전압 V가 존재하며 이로 인해 전류 I 가 생성되고 있습니다. 또한 그림에서 알 수 있는 사실은 전류는 전위가 높은 +에서 -로 흐른다는 사실입니다. 
 
@@ -56,13 +56,13 @@ $$ V = IR $$
 
 **키르히호프의 전류 법칙(Kirchhoff's Current Law)** :
 
-![Kirchhoff's Current Law](/assets/img/post/2022-07-17/kirchhoff-s-law2.jpg)_키르히호프의 전류 법칙, [출저](https://www.careerstoday.in/physics/kirchhoff-s-law)_
+![Kirchhoff's Current Law](/assets/img/post/2022-07-13/kirchhoff-s-law2.jpg)_키르히호프의 전류 법칙, [출저](https://www.careerstoday.in/physics/kirchhoff-s-law)_
 
 위 사진이 키르히호프의 전류 법칙을 잘 설명해주고 있습니다. 전류가 흐르는 회로에서 여러 전선이 겹치는 노드가 있을 때, 그 노드를 기준으로 노드에 들어가는 전류와 노드로부터 나가는 전류의 양이 같다는 것입니다. 
 
 **키르히호프의 전압 법칙(Kirchhoff's Voltage Law)** :
 
-![Kirchhoff's Voltage Law](/assets/img/post/2022-07-17/kirchhoff-s-law3.jpg)_키르히호프의 전압 법칙, [출저](https://www.careerstoday.in/physics/kirchhoff-s-law)_
+![Kirchhoff's Voltage Law](/assets/img/post/2022-07-13/kirchhoff-s-law3.jpg)_키르히호프의 전압 법칙, [출저](https://www.careerstoday.in/physics/kirchhoff-s-law)_
 
 키르히호프의 전압 법칙은 위 그림과 같이 회로의 형태가 닫혀있는(폐쇄형) 회로에서 적용됩니다. 키르히호프의 전압 법칙에 따르면 폐쇄형 회로에서 생기는 모든 전압을 합한 값은 0입니다.
 
@@ -70,17 +70,17 @@ $$ V = IR $$
 ## **커페시터(capacitor)**
 케퍼시터는 부품 중 하나이며, 케퍼시터에 공급되는 전기를 자신의 역량만큼 저장하고 있다가 인가되는 전기가 중단되거나 줄었을 때 저장한 전기를 역으로 공급하는 기능을 합니다. 회로에서는 다음과 같이 나타내어집니다:
 
-![capacitor symbol](/assets/img/post/2022-07-17/R.jpg){: width="500" height="300"}_케퍼시터 표기, [출저](http://www.stitchingworlds.net/experimentation/measuring-textile-capacitors/)_ | ![Capacitors](/assets/img/post/2022-07-17/Capacitors.jpg){: width="500" height="300"}_케퍼시터, [출저](https://en.wikipedia.org/wiki/Capacitor)_
+![capacitor symbol](/assets/img/post/2022-07-13/R.jpg){: width="500" height="300"}_케퍼시터 표기, [출저](http://www.stitchingworlds.net/experimentation/measuring-textile-capacitors/)_ | ![Capacitors](/assets/img/post/2022-07-13/Capacitors.jpg){: width="500" height="300"}_케퍼시터, [출저](https://en.wikipedia.org/wiki/Capacitor)_
 
 케퍼시터의 원리를 알아내기 위해 당므과 같은 회로를 구상해보겠습니다(아래 왼쪽 그림2). 
 
-![capacitor circuit](/assets/img/post/2022-07-17/capacitor_circuit.PNG)_capacitor circuit_ | ![charged capacitor circuit2](/assets/img/post/2022-07-17/capacitor_circuit2.PNG)_charged capacitor circuit_
+![capacitor circuit](/assets/img/post/2022-07-13/capacitor_circuit.PNG)_capacitor circuit_ | ![charged capacitor circuit2](/assets/img/post/2022-07-13/capacitor_circuit2.PNG)_charged capacitor circuit_
 
 회로에서는 전원부와 커페시터만이 연결되어 있고 전원부는 V만큼의 전위차를 만들어내며 시계 방향으로 전류를 공급하고 있습니다. 전류가 흐를 때 **전자는 전류의 반대방향으로 이동**하기 때문에, 그림에서 전자는 시계 반대방향으로 이동하게 됩니다. 하지만 그림에서 커페시터에 의해 회로가 끊어져 있기 때문에, 전자들은 커페시터에 막혀 오른쪽 넓적한 판에 갇혀있게 됩니다. 오른쪽 판에 전자가 더 많이 모이게 될 수록 오른쪽 판이 점점 음전하를 띄게 되며 반대쪽 왼쪽 판에 양전하가 모이게끔 하는 역할을 하게 됩니다. 이 과정이 지속되다가 커페시터의 역량이 한계에 도달하여 더이상의 전자 축적이 되지 않는 상태까지 온 경우, 위와 같은 상호작용이 멈추게 되며 더이상 회로에 전류가 흐르지 않게 됩니다. 
 
 그럼 다음과 같은 상황에서 전원부를 탈착하면 어떤 현상이 일어날까요? 전원부가 없어지게 되면 커페시터가 저장된 전기를 배출하며 전원부 역할을 하게 됩니다. 대신 이번에는 왼쪽 판의 전위가 더 높기 떄문에(양전하) 반시계 방향의 전류를 생성해 내며, 그 말인 즉슨 오른쪽 판에 축적된 전자를 시계방향으로 배출한다는 의미가 됩니다.
 
-![capacitor circuit without power](/assets/img/post/2022-07-17/capacitor_circuit3.PNG)_capacitor circuit without power_
+![capacitor circuit without power](/assets/img/post/2022-07-13/capacitor_circuit3.PNG)_capacitor circuit without power_
 
 커페시터에도 공식이 존재하는데, 그 공식은 다음과 같습니다:
 
