@@ -49,9 +49,13 @@ $$ \frac{dv_C}{dt}=-\frac{v_C}{RC} $$
 $$ \frac{dv_C}{v_C} = \frac{dt}{RC} $$
 
 전개된 식의 양 변을 적분하면 다음과 같습니다($K$는 적분상수):
+
 $$ \int{\frac{dv_C}{v_C}}=-\int{\frac{dt}{RC}} $$
+
 $$ \ln(v_C) = -\frac{1}{RC}\int{1\cdot dt} = -\frac{t}{RC} + K $$
+
 $$ \ln(v_C) =-\frac{t}{RC} + K$$
+
 $$ v_C(t) = e^{-\frac{t}{RC}+K} = e^{K}e^{-\frac{t}{RC}} $$
 
 위 식에서 지수가 적분상수 $K$인 자연상수$e^K$는 큰 의미가 없으므로 $K$로 대체해줍니다:
@@ -61,12 +65,15 @@ $$ \therefore v_C(t) = Ke^{-\frac{t}{RC}} $$
 만약 공급원이 없이 저항과 커페시터만 있는 RC회로라면, 위 공식에 $t=0$을 넣어 식의 초기값 $v_C(0)$을 구할 수 있습니다:
 
 $$ v_C(0) = Ke^{-\frac{0}{RC}} = K \cdot 1 = K $$
+
 $$  v_C(t) = v_C(0) \cdot e^{-\frac{t}{RC}} $$
 
 ## **강제응답 유도**
 
 이번에는 공급원이 작동하는 RC회로의 전압 응답을 구해보겠습니다. 먼저 RC회로에 KCL 법칙을 적용해 유도한 공식을 적어놓고 시작하겠습니다. 아래 식에서 고려되는 전압 $v_S$ 혹은 $v_S(t)$는 **전압원의 전압**입니다(커페시터의 전압이었던 고유응답과의 차이에 유의하시기 바랍니다).
+
 $$ C\frac{dv_S}{dt}+\frac{v_S}{R} = I_S $$
+
 $$ \frac{dv_S}{dt} + \frac{v_S}{RC} = \frac{I_S}{C} $$
 
 위 RC회로의 공급원은 DC이기에 전압원의 전압값이 변하지 않으므로, 식에서의 $v_S$값을 변수가 아닌 상수 $A$로 치환할 수 있습니다:
@@ -76,22 +83,29 @@ $$ \frac{d}{dt}A + \frac{A}{RC} = \frac{I_S}{C} $$
 위 식의 첫번쨰 항 $\frac{d}{dt}A$는 상수 A를 $t$에 대해 미분하는 형태이므로 소거됩니다 따라서
 
 $$ \frac{A}{RC} = \frac{I_S}{C} $$
+
 $$ A = \frac{I_S}{C} \cdot RC = I_SR = v_S $$
+
 $$ \therefore v_S = I_SR $$
 
 ## **완전응답 유도**
 
 위 그림과 같은 RC회로의 완전응답은 강제응답과 고유응답의 합과 같다고 하였습니다. 저희가 위에서 구한 결과를 통해 다음과 같은 식을 유도할 수 있습니다:
+
 $$ v(t) = v_C(t) + v_S(t) $$
+
 $$ v(t) = Ke^{-\frac{t}{RC}} + I_SR$$
 
 위 식에서 적분상수 K를 구하면 식이 완성됩니다. 적분상수 K는 다음과 같이 유도할 수 있습니다:
 
-$$ v(0) = Ke^{-\frac{0}{RC}} + I_SR = K \cdot 1 + I_SR = K + I_SR$$
+$$ v(0) = Ke^{-\frac{0}{RC}} + I_SR = K \cdot 1 + I_SR = K + I_SR $$
+
 $$ v(0) = K + I_SR $$
+
 $$ K = v(0) - I_SR $$
 
 다음과 같이 구한 K를 완전응답 식에 대입해줌으로써 완전응답을 구할 수 있습니다:
+
 $$ \therefore v(t) = (v(0) - I_SR)e^{-\frac{t}{RC}} + I_SR $$
 
 ## **마치며**
