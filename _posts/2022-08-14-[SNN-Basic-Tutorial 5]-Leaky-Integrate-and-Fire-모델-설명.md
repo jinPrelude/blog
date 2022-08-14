@@ -7,6 +7,8 @@ math: true
 toc: true
 ---
 
+### **SNN Basic Tutorial 목차**
+
 1. [Spiking Neural Network란](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)
 
 2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
