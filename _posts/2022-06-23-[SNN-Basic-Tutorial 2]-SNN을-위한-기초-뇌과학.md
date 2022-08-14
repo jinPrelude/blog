@@ -6,7 +6,7 @@ tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, Neuroscience, 뇌과학,
 toc: true
 ---
 
-딥러닝을 공부해 보신 분들은 아시겠지만 DNN 네트워크의 형상학적인 부분을 동물의 신경망에서 영감을 받았다는 점을 제외하고는 더이상 생물학과 관련된 지식을 요구하지 않습니다. 하지만 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 에서 언급했듯이 SNN의 경우 태생이 생명과학에 뿌리를 두고 있는 만큼 대부분의 명칭이 생물학적 용어를 그대로 차용합니다. 본 글에서는 SNN의 기반이 되는 기초적인 뇌과학을 다룹니다. 이 글을 읽고 SNN을 보신다면 더욱 깊은 이해를 하실 수 있으실거라 믿습니다. 이번 글을 읽으시기 전에 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 를 읽고 오신다면 이해가 더욱 수월하실 겁니다.
+딥러닝을 공부해 보신 분들은 아시겠지만 DNN 네트워크의 형상학적인 부분을 동물의 신경망에서 영감을 받았다는 점을 제외하고는 더이상 생물학과 관련된 지식을 요구하지 않습니다. 하지만 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80//)** 에서 언급했듯이 SNN의 경우 태생이 생명과학에 뿌리를 두고 있는 만큼 대부분의 명칭이 생물학적 용어를 그대로 차용합니다. 본 글에서는 SNN의 기반이 되는 기초적인 뇌과학을 다룹니다. 이 글을 읽고 SNN을 보신다면 더욱 깊은 이해를 하실 수 있으실거라 믿습니다. 이번 글을 읽으시기 전에 **[이전 포스트](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)** 를 읽고 오신다면 이해가 더욱 수월하실 겁니다.
 
 > 본 내용은 [Neuroscience: Science of the Brain](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL__-ossL4AhVmGKYKHXu5BEUQFnoECAMQAQ&url=https%3A%2F%2Fbrain.mcmaster.ca%2FBrainBee%2FNeuroscience.Science.of.the.Brain.pdf&usg=AOvVaw1qxRUhwDpXU5UC86cs2wnK&cshid=1655946824320580)에 많은 기반을 두고 있습니다. 놔과학에 대한 지식이 전무한 제가 입문할 수 있도록 많은 도움을 준 자료입니다.
 {: .prompt-info }
@@ -17,8 +17,6 @@ toc: true
 ## **Neuron의 구조**
 
 DNN이 Neuron과 weight 두 가지 컴포넌트로 복잡한 연산을 처리하듯이, 동물의 뇌를 구성하는 가장 작은 단위는 **Neuron**입니다.
-
-
 
 ![Neuron의 명칭](/assets/img/post/2022-06-23/Neuron.jpg)_Neuron의 명칭, [출저](https://commons.wikimedia.org/wiki/File:Neuron.svg)_
 

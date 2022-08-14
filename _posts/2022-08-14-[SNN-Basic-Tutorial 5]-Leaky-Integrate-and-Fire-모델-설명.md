@@ -11,7 +11,7 @@ toc: true
 
 ## **Leaky Integrate and Fire(LIF) 란**
 
-이전 글 [[SNN Basic Tutorial 3] SNN을 위한 기초 회로이론](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0/) 에서 "자연현상을 수학적으로 나타낼 수 있도록 가공하는 과정" 을 **모델링**이라고 설명하였습니다. 현재 다양한 목적에 맞게 동물의 뉴런을 모델링 한 다양한 모델이 있습니다. 한 예로 뉴런의 action potential을 가장 현실적으로 모사했다고 평가받는 모델은 바로 **[Hodgkin-Huxley model](https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model)** 인데, 이 모델은 1952년에 개발되었으며 실제 오징어의 squid giant axon을 실험적으로 분석하여 만들었습니다.
+이전 글 [[SNN Basic Tutorial 3] SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/) 에서 "자연현상을 수학적으로 나타낼 수 있도록 가공하는 과정" 을 **모델링**이라고 설명하였습니다. 현재 다양한 목적에 맞게 동물의 뉴런을 모델링 한 다양한 모델이 있습니다. 한 예로 뉴런의 action potential을 가장 현실적으로 모사했다고 평가받는 모델은 바로 **[Hodgkin-Huxley model](https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model)** 인데, 이 모델은 1952년에 개발되었으며 실제 오징어의 squid giant axon을 실험적으로 분석하여 만들었습니다.
 
 앞서 소개드렸듯이 이번 포스트에서 다룰 모델은 **Leaky Integrate and Fire(LIF) 모델**입니다. LIF 모델은 뉴런이 가지고 있는 다음의 규칙이 모델링되었습니다:
 
@@ -83,6 +83,7 @@ $u(t)$ : 시간 $t$에서의 membrane potential
 $u_{rest}$: Resting Membrane potential
 
 > 우변 첫 번째 항의 분자가 $u(t)$가 아닌 $u(t) - u_{rest}$ 인 이유는, Resting Voltage를 위해 전압원이 추가됨으로 인해 전위차를 뜻하는 전압의 정의에 의해 $u(t) - 0$이 아닌 $u(t) - u_{rest}$ 가 되었기 때문입니다.
+{: .prompt-warning }
 
 식을 $\frac{du}{dt}$에 대해 전개해보면 다음과 같습니다:
 

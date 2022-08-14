@@ -51,4 +51,4 @@ _SNN에 특화된 Intel의 Loihi칩-[출처](https://www.intel.com/content/www/u
 
 본 글에서는 SNN의 소개를 다루었습니다. 다음 글부터는 SNN을 이해하기 위한 기초지식들을 다룰 예정입니다. SNN을 이해하기 위한 기초적인 **뇌과학, 회로이론, 미분방정식** 을 먼저 살펴본 다음, SNN에 대해서 본격적으로 다룰 계획입니다.
 
-다음 글인 **[SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EC%8B%A0%EA%B2%BD%EA%B3%BC%ED%95%99/)** 에서는 실제 동물의 뉴런과 시넵스의 구조, 역할에 대해서 알아보도록 하겠습니다.
+다음 글인 **[SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)** 에서는 실제 동물의 뉴런과 시넵스의 구조, 역할에 대해서 알아보도록 하겠습니다.
