@@ -25,20 +25,24 @@ LIF 모델은 직관적이고 단순한 만큼 낮은 구현 난이도와 연산
 
 이전 포스트에서 언급했듯이 LIF 모델은 RC회로로 모델링될 수 있습니다. LIF모델의 특징과 규칙을 살펴보며 어떤 특징이 RC회로에 어떻게 대응되는지 살펴보겠습니다.
 
-### **1. Pre-synaptic neurons들의 spike를 종합한다.**
+**1. Pre-synaptic neurons들의 spike를 종합한다.**
+
 Pre-synaptic neurons들의 spike는 외부에서 들어오는 전력으로 볼 수 있으며, 이전 포스트에서의 공급원(혹은 강제응답)에 해당합니다.
 
-### **2. Membrane은 전하를 저장한다**
+**2. Membrane은 전하를 저장한다**
+
 뉴런은 pre-synaptic으로부터 전해지는 action potential을 통해 뉴런 내에 Sodium ion을 저장합니다. 이러한 특징은 전력을 일시적으로 저장해놓는 **커페시터**로 모델링될 수 있습니다.
 
-### **3. Membrane potential은 시간이 지남에 따라 Resting Voltage로 돌아간다**
+**3. Membrane potential은 시간이 지남에 따라 Resting Voltage로 돌아간다**
+
 Membrane potential은 action potential에 이해 전압이 높아졌다가도 시간이 지나면 membrane을 통해 이온이 빠져나가며 다시 Resting potential, 혹은 Resting Voltage로 돌아갑니다. 이는 회로에 **저항**을 추가시킴으로써 구현해줄 수 있습니다. 또한 이전 회로에서의 $v(0)$이 바로 resting voltage가 되는데, 때문에 아래 그림과 같이 저희가 배운 RC회로에 Resting voltage가 되줄 전압원을 추가시켜주게 됩니다($V_r$은 resting voltage를 나타냅니다):
 
 ![LIF circuit](/assets/img/post/2022-08-14/LIF_circuit.PNG)_LIF circuit_
 
 위 그림과 같이 회로를 구성하게 되면서 화로의 $v(0)을 저희가 원하는 resting voltage로 설정할 수 있게 되었습니다.
 
-### **4. membrane potential이 threshold voltage를 넘으면 spike를 생성하고 reset voltage로 초기화된다.**
+**4. membrane potential이 threshold voltage를 넘으면 spike를 생성하고 reset voltage로 초기화된다.**
+
 이 부분은 회로를 통해서가 아닌 코딩을 통해서 처리해주게 됩니다. 전자회로의 전압응답(혹은 membrane potential)을 지속적으로 주시하며, 전압응답이 threshold voltage를 넘게 되면 post-synaptic neuron에게 spike를 전달한 다음, membrane potential을 reset voltage로 초기화시키는 코드를 추가시킬 것입니다.
 
 ### **수치해석을 위한 $y(t, h)$ 구하기**
