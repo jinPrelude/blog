@@ -51,7 +51,7 @@ Membrane potential은 action potential에 이해 전압이 높아졌다가도 �
 
 ![LIF circuit](/assets/img/post/2022-08-14/LIF_circuit.PNG)_LIF circuit_
 
-위 그림과 같이 회로를 구성하게 되면서 화로의 $v(0)을 저희가 원하는 resting voltage로 설정할 수 있게 되었습니다.
+위 그림과 같이 회로를 구성하게 되면서 화로의 $v(0)$을 저희가 원하는 resting voltage로 설정할 수 있게 되었습니다.
 
 **4. membrane potential이 threshold voltage를 넘으면 spike를 생성하고 reset voltage로 초기화된다.**
 
