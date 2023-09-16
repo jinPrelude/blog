@@ -99,13 +99,13 @@ $u_{rest}$: Resting Membrane potential
 
 식을 $\frac{du}{dt}$에 대해 전개해보면 다음과 같습니다:
 
-$$ C\frac{du}{dt} = -\frac{u(t)-u_{reset}}{R}+I(t) $$
+$$ C\frac{du}{dt} = -\frac{u(t)-u_{rest}}{R}+I(t) $$
 
-$$ RC\frac{du}{dt} = -[u(t)-u_{reset}] + RI(t) $$
+$$ RC\frac{du}{dt} = -[u(t)-u_{rest}] + RI(t) $$
 
 마지막으로 RC를 시정수(Time constant) $\tau$로 치환하여 표기하겠습니다.
 
-$$ \therefore \frac{du}{dt} = -\frac{-[u(t)-u_{reset}]+RI(t)}{\tau}$$
+$$ \therefore \frac{du}{dt} = -\frac{-[u(t)-u_{rest}]+RI(t)}{\tau}$$
 
 ## **파이썬으로 LIF 모델을 구현해보자**
 
@@ -182,7 +182,7 @@ class LifNeuron:
 
     """
     is_spike = False   # 
-    self.membrane_potential += (-(self.membrane_potential - self.mv_reset) + self.g * input_current_pa)* dt / self.tau
+    self.membrane_potential += (-(self.membrane_potential - self.mv_rest) + self.g * input_current_pa)* dt / self.tau
     if self.membrane_potential >= self.mv_threshold :
       is_spike = True
       self.membrane_potential = self.mv_reset
