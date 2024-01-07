@@ -1,7 +1,7 @@
 ---
 title: '[SNN Basic Tutorial 5] Leaky Integrate and Fire(LIF) 모델 설명'
 date: 2022-08-14 17:22:00 +0900
-categories: ['SNN Basic Tutorial']
+categories: ['[KOR] SNN Basic Tutorial']
 tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, LIF, Leaky Integrate and Fire, python] # TAG names should always be lowercase
 math: true
 toc: true

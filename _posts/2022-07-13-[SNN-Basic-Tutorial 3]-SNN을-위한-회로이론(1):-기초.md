@@ -1,7 +1,7 @@
 ---
 title: '[SNN Basic Tutorial 3] SNN을 위한 회로이론(1): 기초'
 date: 2022-07-13 11:01:00 +0900
-categories: ['SNN Basic Tutorial']
+categories: ['[KOR] SNN Basic Tutorial']
 tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, circuit, capacitor] # TAG names should always be lowercase
 math: true
 toc: true

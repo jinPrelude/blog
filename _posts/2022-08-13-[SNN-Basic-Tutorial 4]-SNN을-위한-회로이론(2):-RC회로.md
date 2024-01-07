@@ -1,7 +1,7 @@
 ---
 title: '[SNN Basic Tutorial 4] SNN을 위한 회로이론(2): RC회로'
 date: 2022-08-13 18:30:00 +0900
-categories: ['SNN Basic Tutorial']
+categories: ['[KOR] SNN Basic Tutorial']
 tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, circuit, capacitor, rc circuit] # TAG names should always be lowercase
 math: true
 toc: true

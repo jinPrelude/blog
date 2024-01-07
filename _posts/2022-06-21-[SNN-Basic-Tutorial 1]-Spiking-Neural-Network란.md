@@ -1,7 +1,7 @@
 ---
 title: '[SNN Basic Tutorial 1] Spiking Neural Network란'
 date: 2022-06-21 19:53:00 +0900
-categories: ['SNN Basic Tutorial']
+categories: ['[KOR] SNN Basic Tutorial']
 tags: [SNN Basic Tutorial, SNN, Spiking Neural Network] # TAG names should always be lowercase
 toc: true
 math: true
