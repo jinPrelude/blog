@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privateData/
+
+Sitemap: https://jinprelude.github.io/sitemap.xml
