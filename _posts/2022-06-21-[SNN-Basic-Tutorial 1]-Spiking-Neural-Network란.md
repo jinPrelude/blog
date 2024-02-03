@@ -29,7 +29,7 @@ SNN은 인공신경망(Artificial Neural Network, ANN)의 한 종류입니다. �
 ![Spiking Neurons의 정보처리 방식](/assets/img/post/2022-06-21/showOpenGraphArticleImage.jpg)
 _Spiking Neurons의 정보처리 방식, [출저](https://aip.scitation.org/doi/abs/10.1063/1.5042243)_
 
-그림은 두 개의 Spiking Neurons이 연결되어 있으며, pre Neuron이 post Neuron에게 정보를 전달하도록 설정되어있는 상태입니다. pre Neuron의 우측에 그려진 1차원 그래프는 시간축에 따라 pre Neuron이 post Neuron에게 총 3번의 Spike를 보낸다는 점을 알려줍니다. 사진의 가운데 파란색으로 채색된 그래프는 시간에 따른 post Neuron의 **활동전위(action potential)**를 나타냅니다(활동전위에 대해서는 [Neuroscience 기초(1)]()에서 자세히 다루겠습니다). Post Neuron의 활동전위는 pre Neuron으로부터 Spike를 받을 떄 특정한 값만큼 치솟고, 시간이 지남에 따라 서서히 줄어듭니다(Leaky). 세 번째 Spike가 post Neuron에 들어오게 되면서 활동전위는 임의의 **임계값(threshold)**인 $u_{th}$를 넘게 되고, 그와 동시에 post Neuron의 활동전위의 값은 0으로 초기화됩니다. 그리고 사진의 가장 아랫쪽 빨간색으로 채색된 그래프를 보았을 때 post Neuron의 활동전위가 임계값을 넘는 동시에 post Neuron에서 **Spike가 생성**되었음을 알 수 있습니다.
+그림은 두 개의 Spiking Neurons이 연결되어 있으며, pre Neuron이 post Neuron에게 정보를 전달하도록 설정되어있는 상태입니다. pre Neuron의 우측에 그려진 1차원 그래프는 시간축에 따라 pre Neuron이 post Neuron에게 총 3번의 Spike를 보낸다는 점을 알려줍니다. 사진의 가운데 파란색으로 채색된 그래프는 시간에 따른 post Neuron의 **활동전위(action potential)**를 나타냅니다(활동전위에 대해서는 [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN을-위한-기초-뇌과학/)에서 자세히 다루겠습니다). Post Neuron의 활동전위는 pre Neuron으로부터 Spike를 받을 떄 특정한 값만큼 치솟고, 시간이 지남에 따라 서서히 줄어듭니다(Leaky). 세 번째 Spike가 post Neuron에 들어오게 되면서 활동전위는 임의의 **임계값(threshold)**인 $u_{th}$를 넘게 되고, 그와 동시에 post Neuron의 활동전위의 값은 0으로 초기화됩니다. 그리고 사진의 가장 아랫쪽 빨간색으로 채색된 그래프를 보았을 때 post Neuron의 활동전위가 임계값을 넘는 동시에 post Neuron에서 **Spike가 생성**되었음을 알 수 있습니다.
 
 다수의 Pre Neurons가 연결되어있을 때에도 동일합니다(아래 그림 참고). 시간축에 따라 Pre Neurons의 Spiking을 받고 Post Neuron의 활동전위가 임계값을 넘게 되면 Post Neuron은 Spiking을 생성해 냅니다. 
 

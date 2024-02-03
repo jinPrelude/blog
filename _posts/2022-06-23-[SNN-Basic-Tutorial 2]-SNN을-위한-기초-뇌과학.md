@@ -37,7 +37,7 @@ DNN이 Neuron과 weight 두 가지 컴포넌트로 복잡한 연산을 처리하
 **Dendrite** 는 다른 뉴런들이 보내는 Spike를 받아 **cell body** 에 전달하게 됩니다. dendrite에는 **Dendritic spine(수상돌기가시)** 이라는 돌기 가시가 있는데(아래 좌측 그림 참고), dendritic spine마다 하나의 뉴런이, 정확히는 뉴런의 **Axon terminal**이 연결되어 있습니다. 즉, 한 줄기의 dendrite에 한 개 이상의 뉴런이 연결관계에 있습니다. 이렇게 dendrite로부터 종합된 정보들은 cell body에서 다른 dendrites들의 정보와 함께 다시 종합됩니다. 종합된 spike로 인한 action potential(활동전위)이 threshold voltage를 넘게 되면 **Axon** 을 통해 action potential을 전달하고, 그 연쇄반응으로 synapse에서는 또다른 뉴런의 dendrit
 ic spine을 통해 신호를 전달하기 위한 화학반응을 일으키게 됩니다. 아래 우측 그림은 기능적인 요소에 기반하여 뉴런을 단순화한 그림입니다.
 
-![dendritic spine](/assets/img/post/2022-06-23/Dendritic-Spine0.jpg)_dendritic spine, [출저](http://www.msrblog.com/science/biology/dendritic-spine.html)_ | ![Simplified Neuron](/assets/img/post/2022-06-23/neuron_simplified.PNG){: w="700" h="400" }_Simplified Neuron, [출저](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL__-ossL4AhVmGKYKHXu5BEUQFnoECAMQAQ&url=https%3A%2F%2Fbrain.mcmaster.ca%2FBrainBee%2FNeuroscience.Science.of.the.Brain.pdf&usg=AOvVaw1qxRUhwDpXU5UC86cs2wnK&cshid=1655946824320580)_
+![dendritic spine](/assets/img/post/2022-06-23/Dendritic-Spine0.jpg)_dendritic spine, [출저](https://www.msrblog.com/science/biology/dendritic-spine.html)_ | ![Simplified Neuron](/assets/img/post/2022-06-23/neuron_simplified.PNG){: w="700" h="400" }_Simplified Neuron, [출저](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjL__-ossL4AhVmGKYKHXu5BEUQFnoECAMQAQ&url=https%3A%2F%2Fbrain.mcmaster.ca%2FBrainBee%2FNeuroscience.Science.of.the.Brain.pdf&usg=AOvVaw1qxRUhwDpXU5UC86cs2wnK&cshid=1655946824320580)_
 
 ## **Action Potential이란**
 

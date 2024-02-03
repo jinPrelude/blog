@@ -82,7 +82,7 @@ $$ V = IR $$
 ## **커페시터(capacitor)**
 케퍼시터는 부품 중 하나이며, 케퍼시터에 공급되는 전기를 자신의 역량만큼 저장하고 있다가 인가되는 전기가 중단되거나 줄었을 때 저장한 전기를 역으로 공급하는 기능을 합니다. 회로에서는 다음과 같이 나타내어집니다:
 
-![capacitor symbol](/assets/img/post/2022-07-13/R.jpg){: width="500" height="300"}_케퍼시터 표기, [출저](http://www.stitchingworlds.net/experimentation/measuring-textile-capacitors/)_ | ![Capacitors](/assets/img/post/2022-07-13/Capacitors.jpg){: width="500" height="300"}_케퍼시터, [출저](https://en.wikipedia.org/wiki/Capacitor)_
+![capacitor symbol](/assets/img/post/2022-07-13/R.jpg){: width="500" height="300"}_케퍼시터 표기, [출저](https://www.stitchingworlds.net/experimentation/measuring-textile-capacitors/)_ | ![Capacitors](/assets/img/post/2022-07-13/Capacitors.jpg){: width="500" height="300"}_케퍼시터, [출저](https://en.wikipedia.org/wiki/Capacitor)_
 
 케퍼시터의 원리를 알아내기 위해 당므과 같은 회로를 구상해보겠습니다(아래 왼쪽 그림2). 
 
