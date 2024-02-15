@@ -20,7 +20,7 @@ math: true
 5. [Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)
 
 
-**SNN Basic Tutorial** 연재에서는 딥러닝에 대한 기조척인 이해는 있지만 SNN은 처음이신 분들이 SNN의 기본적인 개념부터, 가장 기초적인 SNN 모델인 Leaky Integrate and Fire model(LIF)의 미분방정식까지 이해하시는 것을 목표로 작성하였습니다. 또한 파이썬을 이용하여 간단한 LIF 모델까지 구현하여 볼 것입니다.
+**SNN Basic Tutorial** 연재에서는 딥러닝에 대한 기초적인 이해는 있지만 SNN은 처음이신 분들이 SNN의 기본적인 개념부터, 가장 기초적인 SNN 모델인 Leaky Integrate and Fire model(LIF)의 미분방정식까지 이해하시는 것을 목표로 작성하였습니다. 또한 파이썬을 이용하여 간단한 LIF 모델까지 구현하여 볼 것입니다.
 
 ## **SNN 이란**
 
