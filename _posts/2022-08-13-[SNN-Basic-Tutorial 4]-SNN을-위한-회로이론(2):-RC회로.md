@@ -58,7 +58,7 @@ $$ C\frac{dv_C}{dt}+\frac{v_C}{R} = 0 $$
 
 $$ \frac{dv_C}{dt}=-\frac{v_C}{RC} $$
 
-$$ \frac{dv_C}{v_C} = \frac{dt}{RC} $$
+$$ \frac{dv_C}{v_C} = -\frac{dt}{RC} $$
 
 전개된 식의 양 변을 적분하면 다음과 같습니다($K$는 적분상수):
 
