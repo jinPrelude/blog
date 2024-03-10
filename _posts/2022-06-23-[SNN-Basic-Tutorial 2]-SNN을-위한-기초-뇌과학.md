@@ -2,7 +2,7 @@
 title: '[SNN Basic Tutorial 2] SNN을 위한 기초 뇌과학'
 date: 2022-06-29 17:02:00 +0900
 categories: ['[KOR] SNN Basic Tutorial']
-tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, Neuroscience, 뇌과학, 뉴런, 시넵스, 활동전위, action potential] # TAG names should always be lowercase
+tags: [SNN Basic Tutorial, SNN, Spiking Neural Network, Neuroscience, 뇌과학, 뉴런, 시넵스, 활동전위, action potential, 뉴로모픽, neuromorphic] # TAG names should always be lowercase
 toc: true
 ---
 
