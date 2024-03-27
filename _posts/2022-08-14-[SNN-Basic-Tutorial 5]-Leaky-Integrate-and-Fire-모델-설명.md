@@ -163,7 +163,7 @@ class LifNeuron:
     self.tau = tau  # tau
     self.g = g  # conductance, nanosiemens, nS
 
-    self.membrane_potential = self.mv_reset # 현재의 membrane potential을 저장할 변수를 추가하고, rest voltage로 초기화한다.
+    self.membrane_potential = self.mv_rest # 현재의 membrane potential을 저장할 변수를 추가하고, rest voltage로 초기화한다.
   
   def step(self, input_current_pa = 0, dt = 0.001):
     """
