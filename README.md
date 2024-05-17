@@ -45,6 +45,11 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+ ## Contributing
+
+ The contents of this repository are automatically updated when new releases are made to the [main repository][chirpy].  
+ If you have problems using it, or would like to participate in improving it, please go to the main repository for feedback!
+
 ## License
 
 This work is published under [MIT][mit] License.
@@ -54,3 +59,8 @@ This work is published under [MIT][mit] License.
 [use-template]: https://github.com/cotes2020/chirpy-starter/generate
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+
+
+# install dev enviornment
+- Ruby install on mac: https://mac.install.guide/ruby/13
+- Jekyll install on mac: https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html
