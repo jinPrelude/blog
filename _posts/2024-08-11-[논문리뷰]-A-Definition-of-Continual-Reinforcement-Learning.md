@@ -6,4 +6,7 @@ tags: [CRL, RL] # TAG names should always be lowercase
 author: euijin_jeong
 ---
 
+논문 제목: A Definition of Continual Reinforcement Learning
+링크 : https://arxiv.org/abs/2307.11046
+
 {% include embed/youtube.html id='z-kXMqyv6IU' %}
