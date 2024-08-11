@@ -16,10 +16,10 @@ timezone:
 
 title: Euijin's blog                         # the main title
 
-tagline: AI Reasoning, MLOps, RL, SNN   # it will display as the sub-title
+tagline: Continual Learning, Reinforcement Learning   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  AI Reasoning, MLOps, RL, SNN
+  Spiking Neural Network, Neuromorphic, Reinforcement Learning, Continual Learning, Continual Reinforcement Learning
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
