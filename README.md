@@ -44,5 +44,5 @@ This work is published under [MIT][mit] License.
 
 
 # install dev enviornment
-- Ruby install on mac: https://mac.install.guide/ruby/13
+- Ruby install on mac: https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html
 - Jekyll install on mac: https://danaing.github.io/etc/2022/03/14/M1-mac-jekyll-setting.html
