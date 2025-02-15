@@ -10,21 +10,21 @@ toc: true
 
 ### **SNN Basic Tutorial 목차**
 
-1. [Spiking Neural Network란](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)
+1. [Spiking Neural Network란](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)
 
-2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
+2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
 
-3. [SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)
+3. [SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)
 
-4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
+4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
 
-5. **[Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)**
+5. **[Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)**
 
 때가 왔습니다! 지금까지 배운 내용을 기반으로 이번 글에서는 SNN의 가장 기초적인 모델인 Leaky Integrate and Fire 모델을 알아보도록 하겠습니다.
 
 ## **Leaky Integrate and Fire(LIF) 란**
 
-이전 글 [[SNN Basic Tutorial 3] SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/) 에서 "자연현상을 수학적으로 나타낼 수 있도록 가공하는 과정" 을 **모델링**이라고 설명하였습니다. 현재 다양한 목적에 맞게 동물의 뉴런을 모델링 한 다양한 모델이 있습니다. 한 예로 뉴런의 action potential을 가장 현실적으로 모사했다고 평가받는 모델은 바로 **[Hodgkin-Huxley model](https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model)** 인데, 이 모델은 1952년에 개발되었으며 실제 오징어의 squid giant axon을 실험적으로 분석하여 만들었습니다.
+이전 글 [[SNN Basic Tutorial 3] SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/) 에서 "자연현상을 수학적으로 나타낼 수 있도록 가공하는 과정" 을 **모델링**이라고 설명하였습니다. 현재 다양한 목적에 맞게 동물의 뉴런을 모델링 한 다양한 모델이 있습니다. 한 예로 뉴런의 action potential을 가장 현실적으로 모사했다고 평가받는 모델은 바로 **[Hodgkin-Huxley model](https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model)** 인데, 이 모델은 1952년에 개발되었으며 실제 오징어의 squid giant axon을 실험적으로 분석하여 만들었습니다.
 
 앞서 소개드렸듯이 이번 포스트에서 다룰 모델은 **Leaky Integrate and Fire(LIF) 모델**입니다. LIF 모델은 뉴런이 가지고 있는 다음의 규칙이 모델링되었습니다:
 

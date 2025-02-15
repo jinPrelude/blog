@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /privateData/
 
-Sitemap: https://jinprelude.github.io/sitemap.xml
+Sitemap: https://jinprelude.github.io/blog/sitemap.xml

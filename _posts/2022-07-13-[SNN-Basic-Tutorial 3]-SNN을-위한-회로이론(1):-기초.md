@@ -10,19 +10,19 @@ toc: true
 
 ### **SNN Basic Tutorial 목차**
 
-1. [Spiking Neural Network란](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)
+1. [Spiking Neural Network란](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)
 
-2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
+2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
 
-3. **[SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)**
+3. **[SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)**
 
-4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
+4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
 
-5. [Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)
+5. [Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)
 
 지난 글에서는 SNN을 이해하는데 최소한으로 필요하다고 생각하는 기초적인 뇌과학을 다루었습니다. 이번 포스트에서는 SNN을 이해하는데 도움이 될 기초 회로이론을 다뤄보겠습니다.
 
-어떠한 자연 현상을 컴퓨터로 시뮬레이션하기 위해서는 그 현상을 수학적으로 나타낼 수 있도록 가공하는 과정이 필요한데, 저희는 이러한 과정을 **모델링**이라고 부릅니다. 시뮬레이션에는 모델링 과정이 필수적인 과정이고, SNN 또한 뉴런의 action potential을 수학적으로 모델링한 결과라고 볼 수 있습니다. 그럼 연구자들은 SNN을 어떻게 모델링하였을까요? 연구자들은 뉴련의 action potential을 모델링하기 위해 뉴런을 전기회로에 대입하여 생각하였습니다. 실제로 뉴런이 전기신호를 주고받기 때문에 전기회로로 모사하기 매우 적합했기 때문입니다. 저자가 처음 SNN을 공부할 때 SNN의 모델 공식이 잘 와닿지 않았는데, 전기회로에 대한 매우 기초적인 지식만 알고 가도 이해하는데 훨씬 수월하였습니다. 때문에 간단하게라도 기초적인 회로이론을 다루고 넘어가면 입문자 분들께 도움이 되지 않을까 하여 이번 글을 작성하게 되었습니다. 조금이라도 회로에 대한 기초적인 지식이 있으시거나 미분방정식이 익숙하신 분들은 바로 [다음 글](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)을 읽어보시는 것도 추천드립니다. 공식이 낮설거나 부담스럽게 느껴지신다면, 이 글을 읽으신 다음 다시 다음 글을 읽어보시면 더욱 수월하게 이해하실 수 있으실 겁니다.
+어떠한 자연 현상을 컴퓨터로 시뮬레이션하기 위해서는 그 현상을 수학적으로 나타낼 수 있도록 가공하는 과정이 필요한데, 저희는 이러한 과정을 **모델링**이라고 부릅니다. 시뮬레이션에는 모델링 과정이 필수적인 과정이고, SNN 또한 뉴런의 action potential을 수학적으로 모델링한 결과라고 볼 수 있습니다. 그럼 연구자들은 SNN을 어떻게 모델링하였을까요? 연구자들은 뉴련의 action potential을 모델링하기 위해 뉴런을 전기회로에 대입하여 생각하였습니다. 실제로 뉴런이 전기신호를 주고받기 때문에 전기회로로 모사하기 매우 적합했기 때문입니다. 저자가 처음 SNN을 공부할 때 SNN의 모델 공식이 잘 와닿지 않았는데, 전기회로에 대한 매우 기초적인 지식만 알고 가도 이해하는데 훨씬 수월하였습니다. 때문에 간단하게라도 기초적인 회로이론을 다루고 넘어가면 입문자 분들께 도움이 되지 않을까 하여 이번 글을 작성하게 되었습니다. 조금이라도 회로에 대한 기초적인 지식이 있으시거나 미분방정식이 익숙하신 분들은 바로 [다음 글](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)을 읽어보시는 것도 추천드립니다. 공식이 낮설거나 부담스럽게 느껴지신다면, 이 글을 읽으신 다음 다시 다음 글을 읽어보시면 더욱 수월하게 이해하실 수 있으실 겁니다.
 
 
 ## **전기**

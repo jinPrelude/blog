@@ -10,15 +10,15 @@ math: true
 
 ### **SNN Basic Tutorial 목차**
 
-1. **[Spiking Neural Network란](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)**
+1. **[Spiking Neural Network란](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-1-Spiking-Neural-Network%EB%9E%80/)**
 
-2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
+2. [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)
 
-3. [SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)
+3. [SNN을 위한 회로이론(1): 기초](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-3-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(1)-%EA%B8%B0%EC%B4%88/)
 
-4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
+4. [SNN을 위한 회로이론(2): RC회로](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-4-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%9A%8C%EB%A1%9C%EC%9D%B4%EB%A1%A0(2)-RC%ED%9A%8C%EB%A1%9C/)
 
-5. [Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)
+5. [Leaky Integrate and Fire(LIF) 모델 설명](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-5-Leaky-Integrate-and-Fire-%EB%AA%A8%EB%8D%B8-%EC%84%A4%EB%AA%85/)
 
 
 **SNN Basic Tutorial** 연재에서는 딥러닝에 대한 기초적인 이해는 있지만 SNN은 처음이신 분들이 SNN의 기본적인 개념부터, 가장 기초적인 SNN 모델인 Leaky Integrate and Fire model(LIF)의 미분방정식까지 이해하시는 것을 목표로 작성하였습니다. 또한 파이썬을 이용하여 간단한 LIF 모델까지 구현하여 볼 것입니다.
@@ -30,7 +30,7 @@ SNN은 인공신경망(Artificial Neural Network, ANN)의 한 종류입니다. �
 ![Spiking Neurons의 정보처리 방식](/assets/img/post/2022-06-21/showOpenGraphArticleImage.jpg)
 _Spiking Neurons의 정보처리 방식, [출저](https://aip.scitation.org/doi/abs/10.1063/1.5042243)_
 
-그림은 두 개의 Spiking Neurons이 연결되어 있으며, pre Neuron이 post Neuron에게 정보를 전달하도록 설정되어있는 상태입니다. pre Neuron의 우측에 그려진 1차원 그래프는 시간축에 따라 pre Neuron이 post Neuron에게 총 3번의 Spike를 보낸다는 점을 알려줍니다. 사진의 가운데 파란색으로 채색된 그래프는 시간에 따른 post Neuron의 **활동전위(action potential)**를 나타냅니다(활동전위에 대해서는 [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN을-위한-기초-뇌과학/)에서 자세히 다루겠습니다). Post Neuron의 활동전위는 pre Neuron으로부터 Spike를 받을 떄 특정한 값만큼 치솟고, 시간이 지남에 따라 서서히 줄어듭니다(Leaky). 세 번째 Spike가 post Neuron에 들어오게 되면서 활동전위는 임의의 **임계값(threshold)**인 $u_{th}$를 넘게 되고, 그와 동시에 post Neuron의 활동전위의 값은 0으로 초기화됩니다. 그리고 사진의 가장 아랫쪽 빨간색으로 채색된 그래프를 보았을 때 post Neuron의 활동전위가 임계값을 넘는 동시에 post Neuron에서 **Spike가 생성**되었음을 알 수 있습니다.
+그림은 두 개의 Spiking Neurons이 연결되어 있으며, pre Neuron이 post Neuron에게 정보를 전달하도록 설정되어있는 상태입니다. pre Neuron의 우측에 그려진 1차원 그래프는 시간축에 따라 pre Neuron이 post Neuron에게 총 3번의 Spike를 보낸다는 점을 알려줍니다. 사진의 가운데 파란색으로 채색된 그래프는 시간에 따른 post Neuron의 **활동전위(action potential)**를 나타냅니다(활동전위에 대해서는 [SNN을 위한 기초 뇌과학](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-2-SNN을-위한-기초-뇌과학/)에서 자세히 다루겠습니다). Post Neuron의 활동전위는 pre Neuron으로부터 Spike를 받을 떄 특정한 값만큼 치솟고, 시간이 지남에 따라 서서히 줄어듭니다(Leaky). 세 번째 Spike가 post Neuron에 들어오게 되면서 활동전위는 임의의 **임계값(threshold)**인 $u_{th}$를 넘게 되고, 그와 동시에 post Neuron의 활동전위의 값은 0으로 초기화됩니다. 그리고 사진의 가장 아랫쪽 빨간색으로 채색된 그래프를 보았을 때 post Neuron의 활동전위가 임계값을 넘는 동시에 post Neuron에서 **Spike가 생성**되었음을 알 수 있습니다.
 
 다수의 Pre Neurons가 연결되어있을 때에도 동일합니다(아래 그림 참고). 시간축에 따라 Pre Neurons의 Spiking을 받고 Post Neuron의 활동전위가 임계값을 넘게 되면 Post Neuron은 Spiking을 생성해 냅니다. 
 
@@ -64,4 +64,4 @@ _SNN에 특화된 Intel의 Loihi칩-[출처](https://www.intel.com/content/www/u
 
 본 글에서는 SNN의 소개를 다루었습니다. 다음 글부터는 SNN을 이해하기 위한 기초지식들을 다룰 예정입니다. SNN을 이해하기 위한 기초적인 **뇌과학, 회로이론, 미분방정식** 을 먼저 살펴본 다음, SNN에 대해서 본격적으로 다룰 계획입니다.
 
-다음 글인 **[SNN을 위한 기초 뇌과학](https://jinprelude.github.io/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)** 에서는 실제 동물의 뉴런과 시넵스의 구조, 역할에 대해서 알아보도록 하겠습니다.
+다음 글인 **[SNN을 위한 기초 뇌과학](https://jinprelude.github.io/blog/posts/SNN-Basic-Tutorial-2-SNN%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EC%B4%88-%EB%87%8C%EA%B3%BC%ED%95%99/)** 에서는 실제 동물의 뉴런과 시넵스의 구조, 역할에 대해서 알아보도록 하겠습니다.
