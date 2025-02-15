@@ -16,7 +16,7 @@ timezone:
 
 title: Euijin's blog                         # the main title
 
-tagline: Continual Learning, Reinforcement Learning   # it will display as the sub-title
+tagline: World model, Continual learning, Meta learning   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Spiking Neural Network, Neuromorphic, Reinforcement Learning, Continual Learning, Continual Reinforcement Learning
