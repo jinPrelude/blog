@@ -118,7 +118,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: jinprelude/jinprelude.github.io/blog # <gh-username>/<repo>
+    repo: jinprelude/blog # <gh-username>/<repo>
     repo_id: R_kgDOHg_Y4A
     category: General
     category_id: DIC_kwDOHg_Y4M4CPyWm
